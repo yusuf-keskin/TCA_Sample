@@ -11,6 +11,7 @@
 		32D6AE0D2A8BEF6500EE1831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6AE0C2A8BEF6500EE1831 /* ContentView.swift */; };
 		32D6AE0F2A8BEF6700EE1831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D6AE0E2A8BEF6700EE1831 /* Assets.xcassets */; };
 		32D6AE122A8BEF6700EE1831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D6AE112A8BEF6700EE1831 /* Preview Assets.xcassets */; };
+		32D6AE1A2A8BF0B100EE1831 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6AE192A8BF0B100EE1831 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		32D6AE0C2A8BEF6500EE1831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32D6AE0E2A8BEF6700EE1831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32D6AE112A8BEF6700EE1831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		32D6AE192A8BF0B100EE1831 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				32D6AE0A2A8BEF6500EE1831 /* TCA_Sample_Basic_AppApp.swift */,
 				32D6AE0C2A8BEF6500EE1831 /* ContentView.swift */,
+				32D6AE182A8BF0A200EE1831 /* Store */,
 				32D6AE0E2A8BEF6700EE1831 /* Assets.xcassets */,
 				32D6AE102A8BEF6700EE1831 /* Preview Content */,
 			);
@@ -65,6 +68,14 @@
 				32D6AE112A8BEF6700EE1831 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		32D6AE182A8BF0A200EE1831 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				32D6AE192A8BF0B100EE1831 /* Store.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D6AE1A2A8BF0B100EE1831 /* Store.swift in Sources */,
 				32D6AE0D2A8BEF6500EE1831 /* ContentView.swift in Sources */,
 				32D6AE0B2A8BEF6500EE1831 /* TCA_Sample_Basic_AppApp.swift in Sources */,
 			);

@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct TCA_Sample_Basic_AppApp: App {
     var body: some Scene {
+        
+        let store = Store(reducer: reducer)
+        
         WindowGroup {
-            ContentView()
-        }
+            ContentView().environmentObject(store)        }
     }
 }

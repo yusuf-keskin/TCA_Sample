@@ -8,12 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var store : Store
+    
+    struct Props {
+        let counter : Int
+        let onIncrement : () -> Void
+        let onDecrement : () -> Void
+        let onAdd : (Int) -> Void
+        
+    }
+    
+    private func map(state: State) -> Props {
+        Props(counter: state.counter) {
+            store.dispatch(action: IncerementAction())
+        } onDecrement: {
+            store.dispatch(action: DecrementAction())
+        } onAdd: {
+            store.dispatch(action: AddAction(value: $0))
+        }
+    }
+    
     var body: some View {
+        
+        let props = map(state: store.state)
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            Text("\(props.counter)")
+            
+            Button("Increment") {
+                props.onIncrement()
+            }
+            
+            Button("Decrement") {
+                props.onDecrement()
+            }
+            
+            Button("Add 100") {
+                props.onAdd(50)
+            }
         }
         .padding()
     }
@@ -21,6 +55,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        
+        let store = Store(reducer: reducer)
+        return ContentView().environmentObject(store)
     }
 }
