@@ -22,6 +22,6 @@ func counterReducer(_ state : CounterState, _ action : Action) -> CounterState {
     default :
         break
     }
-    
+    print(state)
     return state
 }

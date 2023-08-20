@@ -18,6 +18,7 @@ struct ContentView: View {
         let onIncrement : () -> Void
         let onDecrement : () -> Void
         let onAdd : (Int) -> Void
+        let onIncrementAsync : () -> Void
     }
     
     private func map(state: AppState) -> Props {
@@ -27,13 +28,15 @@ struct ContentView: View {
             store.dispatch(action: DecrementAction())
         } onAdd: {
             store.dispatch(action: AddAction(value: $0))
+        } onIncrementAsync: {
+            store.dispatch(action: IncrementActionAsync())
         }
     }
     
     var body: some View {
         
         let props = map(state: store.state)
-        
+        NavigationView {
         VStack {
             Spacer()
             
@@ -51,15 +54,21 @@ struct ContentView: View {
                 props.onAdd(50)
             }
             
-            Spacer()
-            
-            Button("Add Task") {
-                isPresented = true
+            Button("IncrementAsync") {
+                props.onIncrementAsync()
             }
             
             Spacer()
+            
+                NavigationLink {
+                    AddTaskView()
+                } label: {
+                   Text("Naber")
+                }
+
+            Spacer()
         }.sheet(isPresented: $isPresented) {
-            Text("Add Task View")
+        }
         }
     }
 }
@@ -67,7 +76,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let store = Store(reducer: appReducer, state: AppState())
+        let store = Store(reducer: appReducer, state: AppState(), middleware: [logMiddleware()])
         return ContentView().environmentObject(store)
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct TCA_Sample_Basic_AppApp: App {
     var body: some Scene {
         
-        let store = Store<AppState>(reducer: appReducer, state: AppState())
+        let store = Store<AppState>(reducer: appReducer, state: AppState(), middleware: [logMiddleware(), incrementMiddleware()])
         
         WindowGroup {
             ContentView().environmentObject(store)        }

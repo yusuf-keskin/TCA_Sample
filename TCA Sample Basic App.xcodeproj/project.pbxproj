@@ -12,6 +12,8 @@
 		32714F422A90D7C500116A61 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714F412A90D7C500116A61 /* Task.swift */; };
 		32714F442A90D84500116A61 /* TaskReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714F432A90D84500116A61 /* TaskReducer.swift */; };
 		32714F462A90DC1400116A61 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714F452A90DC1400116A61 /* AddTaskView.swift */; };
+		3292EAE12A92457F00C8EF90 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292EAE02A92457F00C8EF90 /* LogMiddleware.swift */; };
+		3292EAE32A924C4700C8EF90 /* IncrementMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292EAE22A924C4700C8EF90 /* IncrementMiddleware.swift */; };
 		32D6AE0B2A8BEF6500EE1831 /* TCA_Sample_Basic_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6AE0A2A8BEF6500EE1831 /* TCA_Sample_Basic_AppApp.swift */; };
 		32D6AE0D2A8BEF6500EE1831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6AE0C2A8BEF6500EE1831 /* ContentView.swift */; };
 		32D6AE0F2A8BEF6700EE1831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D6AE0E2A8BEF6700EE1831 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		32714F412A90D7C500116A61 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		32714F432A90D84500116A61 /* TaskReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReducer.swift; sourceTree = "<group>"; };
 		32714F452A90DC1400116A61 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		3292EAE02A92457F00C8EF90 /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
+		3292EAE22A924C4700C8EF90 /* IncrementMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementMiddleware.swift; sourceTree = "<group>"; };
 		32D6AE072A8BEF6500EE1831 /* TCA Sample Basic App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA Sample Basic App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D6AE0A2A8BEF6500EE1831 /* TCA_Sample_Basic_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_Sample_Basic_AppApp.swift; sourceTree = "<group>"; };
 		32D6AE0C2A8BEF6500EE1831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		32714F3F2A90D79500116A61 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3292EADF2A92456000C8EF90 /* Middlewares */,
 				32714F402A90D7B300116A61 /* Models */,
 				32D6AE182A8BF0A200EE1831 /* Store */,
 			);
@@ -69,6 +74,15 @@
 				32714F412A90D7C500116A61 /* Task.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3292EADF2A92456000C8EF90 /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				3292EAE02A92457F00C8EF90 /* LogMiddleware.swift */,
+				3292EAE22A924C4700C8EF90 /* IncrementMiddleware.swift */,
+			);
+			path = Middlewares;
 			sourceTree = "<group>";
 		};
 		32D6ADFE2A8BEF6500EE1831 = {
@@ -195,6 +209,8 @@
 				32714F462A90DC1400116A61 /* AddTaskView.swift in Sources */,
 				32714F422A90D7C500116A61 /* Task.swift in Sources */,
 				32714F3E2A90CE3600116A61 /* AppReducer.swift in Sources */,
+				3292EAE12A92457F00C8EF90 /* LogMiddleware.swift in Sources */,
+				3292EAE32A924C4700C8EF90 /* IncrementMiddleware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
